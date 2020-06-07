@@ -8,7 +8,7 @@ img_width = 28
 img_height = 28
 channels = 1
 nb_of_generations = 1
-epochs = 15
+epochs = 10
 
 
 def imageGeneration(prepared_image, number_of_gen):
@@ -71,9 +71,9 @@ def predictFashion(X_train, y_train, X_test, y_test):
         keras.layers.Dropout(0.2),
         keras.layers.Conv2D(64, kernel_size=3, activation='relu', input_shape=(img_width, img_height, channels)),
         keras.layers.Dropout(0.3),
+        keras.layers.BatchNormalization(),
         keras.layers.Flatten(),
         keras.layers.Dense(256, activation='relu'),
-        keras.layers.BatchNormalization(),
         keras.layers.Dense(10, activation='softmax')
 
     ])
