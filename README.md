@@ -1,4 +1,4 @@
-# msid-lab4
+# zalando-fashion-mnist
 
 ## Introduction
 Fashion-MNIST is dataset of Zalando's images representing 60,000 examples and 10,000 test set images of clothings. Each exapmle is 28px x 28px grayscale with associated label from 10 classes. Each training and test example is associated with the following labels:
